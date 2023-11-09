@@ -1,0 +1,27 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.cart {
+    width:45px;
+    border-radius: 50%;
+}
+
+.cart + span {
+    font-size: 0.9rem;
+    font-weight: bold;
+    width:20px;
+    text-align: center;
+    margin:0 0.3rem;
+    color:#181515;
+    background-color: rgb(85, 247, 64);
+    border:1px solid #fff;
+    border-radius: 50%;
+}
+
+.itemList-section {
+    text-align: center;
+    margin-top:2rem;
+}
