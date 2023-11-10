@@ -3,9 +3,9 @@ import '../App.css';
 
 export const CartWidget = () => {
   return (
-    <>
-      <img className="cart" src={cartW} alt="Carrito de Compras" />
-      <span>1</span>
-    </>
+    <div className="cart">
+      <img className="cart-img" src={cartW} alt="Carrito de Compras" />
+      <p>0</p>
+    </div>
   )
 }
