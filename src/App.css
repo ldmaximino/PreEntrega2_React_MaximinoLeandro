@@ -4,9 +4,13 @@
     box-sizing: border-box;
 }
 
+:root {
+    --mi-bg:#796c6c;
+  }
+
 html,body {
     /*background-color:#3b3a3a;*/
-    background-color: #796c6c;
+    background-color: var(--mi-bg);
 }
 
 a {
@@ -22,6 +26,12 @@ footer p {
     text-align: center;
 }
 
+.error404 {
+    font-size:3rem;
+    color:black;
+    text-align:center;
+    margin-top:10rem;
+}
 /* Loading - Spinner */
 .spinner-padre { /* centra el spinner */
     height: 100vh;
@@ -57,7 +67,7 @@ footer p {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color:#796c6c;
+    background-color:var(--mi-bg);
 }
 
 .logo {
@@ -94,15 +104,15 @@ footer p {
 }
 
 .cart-img {
-    width:55px;
+    width:50px;
 }
 
 .cart-img + p {
-    font-size: 0.8rem;
+    font-size:0.9rem;
     font-weight: bold;
     width: 20px;
     text-align: center;
-    margin:1rem 1rem;
+    margin:1rem 4rem;
     margin-left:-20px;
     color:#ebda87;
     background-color:  rgb(88, 57, 16);
@@ -160,7 +170,7 @@ footer p {
 /* Sección de Productos */
 .itemList-section {
     width:98vw;
-    padding:2rem 4.5rem;
+    padding:2rem 4rem;
 }
 
 .section-products {
@@ -251,8 +261,85 @@ footer p {
 
 }
 
-/* Responsive Degign 800 - 1100 px */
-@media (min-width: 800px) and (max-width: 1100px) {
+/* ItemDetail */
+.item-detail {
+    display:flex;
+    flex-direction: column;
+    margin:4rem auto;
+    width:450px;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: #4e4545;
+}
+
+.item-detail-01 {
+    display:flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+    gap:2%;
+}
+
+.item-detail-01 img {
+    width: 49%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item-detail-02 {
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+    margin-top:10px;
+}
+
+.item-detail-02 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item-text {
+    display:flex;
+    flex-direction: column;
+    margin:2rem auto;
+    padding:10px;
+    color:rgba(255,255,255, 0.9);
+    font-family: 'Hindi','Times New Roman', Times, serif;
+    font-size:1.5rem;
+}
+
+.item-text li {
+    list-style-type: disc;
+    font-size:1.2rem;
+    opacity: 0.7;
+}
+
+.item-text-nombre {
+    font-size:1.6rem;
+}
+
+.item-text-categoria {
+    opacity: 0.7;
+    margin-top:2rem;
+    margin-bottom:3rem;
+}
+
+.item-text-precio {
+    margin-top:2rem;
+    color: #ebda87;
+    font-size: 1.8rem;
+    font-family:'Poppins',Arial,sans-serif;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Responsive Degign 800 - 1200 px */
+@media (min-width: 751px) and (max-width: 1200px) {
     .itemList-section {
         padding:2rem 2rem;
     }
@@ -266,25 +353,10 @@ footer p {
     }
 }
 
-/* Responsive Degign 1101 - 1400 px*/
-@media (min-width: 1101px) and (max-width: 1400px) {
+/* Responsive Degign 1201 - 1400 px*/
+@media (min-width: 1201px) and (max-width: 1400px) {
     .itemList-section {
-        padding:2rem 9rem;
-    }
-
-    .section-products {
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    .nav-line2-text {
-        font-size:1.5rem;
-    }
-}
-
-/* Responsive Degign 1401 px en adelante */
-@media (min-width: 1401px) {
-    .itemList-section {
-        padding:2rem 6.8rem;
+        padding:3rem 7rem;
     }
 
     .section-products {
@@ -293,5 +365,185 @@ footer p {
 
     .nav-line2-text {
         font-size:1.5rem;
+    }
+
+    .articulos {
+        width: 21rem; 
+      }
+
+    .item-detail {
+        display:flex;
+        flex-direction: row;
+        margin:3.5rem auto;
+        width:80%;
+        height: 68vh;
+        overflow: hidden;
+        border-radius: 20px;
+        background-color: #4e4545;
+    }
+
+    .item-detail-01 {
+        display:flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin:0px;
+        width:20%;
+        height: 100%;
+        overflow: hidden;
+        gap:5px;
+    }
+
+    .item-detail-01 img {
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+    }
+
+    .item-detail-02 {
+        display:flex;
+        flex-direction: column;
+        width:42%;
+        height: 100%;
+        overflow: hidden;
+        margin-left:5px;
+        margin-top:0px;
+    }
+
+    .item-detail-02 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .item-text {
+        display:flex;
+        flex-direction: column;
+        margin:1rem auto;
+        padding:10px;
+        width:38%;
+        color:rgba(255,255,255, 0.9);
+        font-family: 'Hindi','Times New Roman', Times, serif;
+        font-size:1.5rem;
+    }
+
+    .item-text li {
+        list-style-type: disc;
+        font-size:1rem;
+        opacity: 0.7;
+    }
+
+    .item-text-nombre {
+        font-size:1.6rem;
+    }
+
+    .item-text-categoria {
+        font-size:1rem;
+        opacity: 0.7;
+        margin-top:1rem;
+        margin-bottom:1rem;
+    }
+
+    .item-text-precio {
+        margin-top:1rem;
+        color: #ebda87;
+        font-size: 1.5rem;
+        font-family:'Poppins',Arial,sans-serif;
+        font-weight: 600;
+    }
+}
+
+/* Responsive Degign 1401 px en adelante */
+@media (min-width: 1401px) {
+    .itemList-section {
+        padding:2rem 10rem;
+    }
+
+    .section-products {
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .nav-line2-text {
+        font-size:1.5rem;
+    }      
+
+    .item-detail {
+        display:flex;
+        flex-direction: row;
+        margin:1.4rem auto;
+        width:80%;
+        height: 68vh;
+        overflow: hidden;
+        border-radius: 20px;
+        background-color: #4e4545;
+    }
+
+    .item-detail-01 {
+        display:flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin:0px;
+        width:20%;
+        height: 100%;
+        overflow: hidden;
+        gap:5px;
+    }
+
+    .item-detail-01 img {
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+    }
+
+    .item-detail-02 {
+        display:flex;
+        flex-direction: column;
+        width:42%;
+        height: 100%;
+        overflow: hidden;
+        margin-left:5px;
+        margin-top:0px;
+    }
+
+    .item-detail-02 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .item-text {
+        display:flex;
+        flex-direction: column;
+        margin:1rem auto;
+        padding:10px;
+        width:38%;
+        height: 68vh;
+        color:rgba(255,255,255, 0.9);
+        font-family: 'Hindi','Times New Roman', Times, serif;
+        font-size:1.5rem;
+    }
+
+    .item-text li {
+        list-style-type: disc;
+        font-size:1rem;
+        opacity: 0.7;
+    }
+
+    .item-text-nombre {
+        font-size:1.6rem;
+    }
+
+    .item-text-categoria {
+        font-size:1rem;
+        opacity: 0.7;
+        margin-top:1.5rem;
+        margin-bottom:3rem;
+    }
+
+    .item-text-precio {
+        margin-top:2rem;
+        color: #ebda87;
+        font-size: 1.8rem;
+        font-family:'Poppins',Arial,sans-serif;
+        font-weight: 600;
     }
 }

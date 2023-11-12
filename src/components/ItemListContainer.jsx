@@ -5,7 +5,6 @@ import { bdProductos } from '../data/bdProductos';
 import { ItemList } from './ItemList';
 import { toLower } from '../helpers/toLower';
 import { Loading } from './Loading';
-import { CantidadProductos} from './CantidadProductos';
 
 import '../App.css';
 
@@ -16,23 +15,23 @@ export const ItemListContainer = () => {
   const {id} = useParams();
 
   useEffect(() => {
-    
       const myPromise = new Promise((resolve,reject) => {
         setLoading(true);
         setTimeout(() => {
           resolve(bdProductos);
         }, 2000);
-      })
-      myPromise.then((response) => {
-        if(id){
-          const myRespFilter = response.filter(it => toLower(it.categoria) === id);
-          setItems(myRespFilter);
-          setLoading(false);
-        } else {
-          setItems(response);
-          setLoading(false);
-        }
       });
+      myPromise
+        .then((response) => {
+          if(id){
+            const myRespFilter = response.filter(it => toLower(it.categoria) === id);
+            setItems(myRespFilter);
+            setLoading(false);
+          } else {
+            setItems(response);
+            setLoading(false);
+          }
+        })
   },[id]);
 
   return (
@@ -40,8 +39,8 @@ export const ItemListContainer = () => {
       {loading 
         ? (<Loading color="warning" />)
         : (<section className="itemList-section">
-        <ItemList items={items} categoria={id} />
-      </section>)}
+             {items ? <ItemList items={items} categoria={id} /> : <Loading />}
+           </section>)}
     </>
   )
 }

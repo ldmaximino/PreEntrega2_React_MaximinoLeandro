@@ -228,8 +228,8 @@ export const bdProductos = [
         url1: "../src/assets/sg03-1.webp",
         url2: "../src/assets/sg03-2.webp",
         url3: "../src/assets/sg03-3.webp",
-        detalle1: "Gorra de cuero original Argentino.  Modelo Béisbol de 6 gajos . Hebilla trasera regulable de bronce. ",
-        detalle2: "Amplia gama de colores .",
+        detalle1: "Gorra de cuero original Argentino.  Modelo Béisbol de 6 gajos . Hebilla trasera regulable de bronce.",
+        detalle2: "Amplia gama de colores.",
         detalle3: "",
         detalle4: ""
     },
