@@ -360,7 +360,7 @@ footer p {
 /* Responsive Degign 1201 - 1300 px*/
 @media (min-width: 1201px) and (max-width: 1300px) {
     .itemList-section {
-        padding:3rem 7rem;
+        padding:3rem 6rem;
     }
 
     .section-products {
@@ -463,11 +463,11 @@ footer p {
 /* Responsive Degign 1301 px en adelante */
 @media (min-width: 1301px) {
     .itemList-section {
-        padding:2rem 10rem;
+        padding:2rem 6rem;
     }
 
     .section-products {
-        grid-template-columns: repeat(4,1fr);
+        grid-template-columns: repeat(3,1fr);
     }
 
     .articulos {
